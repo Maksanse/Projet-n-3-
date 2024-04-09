@@ -1,0 +1,75 @@
+html{
+    position: relative;
+    right: 8px;
+}
+
+
+#login {
+	width: 50%;
+    margin: auto;
+}
+#login > * {
+	text-align: center;
+
+}
+#login h2{
+    margin-top: 150px;
+	margin-bottom: 20px;
+}
+#login form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#login input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#login label {
+	margin: 2em 0 1em 0;
+}
+#login textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#login p {
+    margin: auto;
+    text-decoration: underline;
+    margin-bottom: 420px;
+}
+
+#login input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer ul, footer li{
+    background-color: #fffff8;   
+}
+
+footer nav{
+    background-color: #fffff8;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+	padding-top: 120px;
+}
+
+#boutonLogin{
+    font-weight: 900;
+}
+
+/*******************************************************************/
+/**********************^^^Style page de connexion^^^****************/
+/*******************************************************************/

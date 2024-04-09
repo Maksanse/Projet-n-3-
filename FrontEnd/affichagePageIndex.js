@@ -1,0 +1,7 @@
+recupérationApi()
+testLocalStorage()
+recupérationApiModal()
+changementModal()
+ajoutPhoto()
+envoieDeLaPhotoApi()
+appelVerifierChamp()

@@ -2,6 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+html{
+	background-color: #FFFFF8;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -22,6 +25,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -56,7 +60,8 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin: 50px 0;
+	padding: 0px 50px;
 }
 section {
 	margin: 50px 0
@@ -124,6 +129,7 @@ li:hover {
 #portfolio h2 {
 	text-align: center;
 	margin-bottom: 1em;
+	padding-top: 50px;
 }
 .gallery {
 	width: 100%;
@@ -131,6 +137,7 @@ li:hover {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	
 }
 
 .gallery img {
@@ -169,7 +176,7 @@ margin: auto;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"]{
+#contact input[type="submit"]{
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
@@ -186,3 +193,409 @@ footer nav ul {
 	margin: 2em
 }
 
+#portfolio{
+	padding: 0px 50px;
+}
+
+/*******************************************************************/
+/*******************^^^Code fournis à la base^^^********************/
+/*******************************************************************/
+
+
+
+/*Lien pour aller de la page Index à Login*/
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+/*Barre de filtre page d'acceuil*/
+
+.barreDeFiltre ul{
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.barreDeFiltre button{
+	background-color: #FFFFF8;
+	border-radius: 25px;
+	border: 1px solid #1D6154;
+	color:#1D6154;
+	height: 37px;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 5px 25px
+}
+
+.barreDeFiltre button:focus{
+	background-color: #1D6154;
+	color:#FFFFF8;
+}
+
+/* Barre noir de modification qui apparait tout en haut */
+
+.barre i{
+	background-color: black;
+	margin-right: 10px;
+}
+
+.barre{
+	background-color: black;
+	color: #FFFFF8;
+}
+
+.conteneurBarre{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	height: 50px;
+}
+
+/* Mon bouton Logout */
+
+.logout{
+	background-color: #FFFFF8;
+	border: none;
+	color: black;
+	padding: 0 10px;
+	font-size: 1.2em;
+	cursor: pointer;
+
+}
+
+.logout:hover{
+	color: #B1663C;
+
+}
+
+
+#listeHeader li:nth-child(4) {
+	order : 5;
+}
+
+#listeHeader li:nth-child(5) {
+	order : 1;
+}
+
+/* bouton de modification */
+
+.placementh2EtModifier{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+.placementh2EtModifier span{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 55px;
+	
+}
+
+#emplacementBoutonModifier{
+	height: 22px;
+}
+
+.boutonModifier{
+	
+	border: none;
+	background-color: #FFFFF8;
+	color: #1D6154;
+	font-size: 17px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.boutonModifier i{
+	padding-right: 10px;
+}
+
+.boutonModifier:hover{
+	color: #B1663C;
+}
+
+.ajoutPadding{
+	padding-bottom: 25px;
+}
+
+/* Modale */
+
+.modalContainer{
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+
+
+}
+
+.modalContainer.active{
+	display: block;
+	
+}
+
+#modal2{
+	display: none;
+	position:relative;
+}
+
+.overlay{
+	position: absolute;
+	width: 1140px;
+	height: 100%;
+	background: hsla(0, 0%, 20%, 0.527);
+}
+
+.modal{
+	width: 95%;
+	max-width: 500px;
+	min-width: 300px;
+	padding: 30px 70px;
+	height: 600px;
+	background-color: #FFFFFF;
+	border-radius: 20px;
+	position:relative;
+	top: 40%;
+	right: 15%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+}
+
+
+
+.closeModal{
+	padding: 8px 10px;
+	border: none;
+	border-radius: 25px;
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+#modal1 h2{
+	font-size: 26px;
+	color: black;
+	font-family: 'Work Sans';
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
+	padding-top: 30px;
+	font-weight: 400;
+}
+
+#modal2 h2{
+	font-size: 26px;
+	color: black;
+	font-family: 'Work Sans';
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
+	padding-top: 10px;
+	font-weight: 400;
+}
+
+
+.addPhotos{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	padding: 10px 20px;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+	border: none;
+	position: absolute;
+	left: 35%;
+	bottom: 2%;
+}
+
+#modal1 hr{
+	position: relative;
+	top: 150px;
+
+}
+
+
+
+.imageApiModal figure{
+	position: relative;
+	display: inline-block;
+}
+
+.imageApiModal img{
+	display: block;
+	height: 120px;
+	width: auto;
+	z-index: 1;
+}
+.imageApiModal{
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	flex-wrap: wrap;
+	gap: 10px;
+	row-gap: 30px;
+}
+
+.boutonSupprimer{
+	background-color: black;
+	height: 25px;
+	width: 25px;
+	border: none;
+	border-radius: 5px;
+	color: #FFFFFF;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 2;
+}
+
+.formulaireAjoutDePhoto{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+
+.formulaireAjoutDePhoto #titreImageAjoute{
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+
+.formulaireAjoutDePhoto select{
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#modal2 hr{
+	position: relative;
+
+}
+
+#boutonAjoutPhoto{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #A7A7A7;
+	margin : 2em auto ;
+	padding: 10px 20px;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+	border: none;
+	position: absolute;
+	left: 35%;
+	bottom: 2%;
+}
+
+#boutonAjoutPhoto.greenBouton{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	padding: 10px 20px;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+	border: none;
+	position: absolute;
+	left: 35%;
+	bottom: 2%;
+}
+
+#ajoutDeLimage{
+	display: none;
+}
+
+.modal .retourModalune{
+	background-color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	
+}
+
+#boutonAjoutPhotoFormulaire{
+	padding: 10px 20px;
+	background-color: #cbd6dc;
+	color: #306685;
+	cursor: pointer;
+	border-radius: 25px;
+}
+
+
+
+
+
+.formulaireAjoutDePhoto button{
+	height: 20px;
+	z-index: 0;
+}
+
+.contenuAjoutPhoto{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #E8F1F6;
+	border-radius: 3px;
+	height: 175px;
+}
+
+
+.contenuAjoutPhoto svg{
+	height: 76px;
+	width: 76px;
+	padding: 15px 0px;
+}
+
+.contenuAjoutPhoto p{
+	font-size: 10px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+.containerAjoutPhoto{
+	height: 175px;
+	width: 100%;
+	background-color: #E8F1F6;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+#apparitionImage img{
+	height: 175px;
+	object-fit:cover;
+	width: auto;
+
+}
+
+.formualireDeConnexion span{
+	margin: auto;
+	padding-top: 20px;
+	color: red;
+	font-weight: 700;
+	display: none;
+}
