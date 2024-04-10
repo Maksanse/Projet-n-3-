@@ -103,44 +103,83 @@ function filtre(response){
 
 //Récupération du Token//
 
-async function recuperationToken(){
+// async function recuperationToken(){
 
+//     const chargeUtile = {
+//         "email" : `${inputMail.value}`,
+//         "password" : `${inputPassword.value}`
+//     }
+
+//     const data = await fetch("http://localhost:5678/api/users/login", {
+//         method : "POST",
+//         headers : {"Content-Type" : "application/json"},
+//         body : JSON.stringify(chargeUtile)
+//     })
+//     .then(async(response)=>{
+//         const responseData = await response.json()
+//         token = responseData.token
+//         console.log(token);
+//     })
+//     localStorage.setItem("token", token)
+// }
+
+async function recuperationToken(email, password) {
     const chargeUtile = {
-        "email" : `${inputMail.value}`,
-        "password" : `${inputPassword.value}`
+        email,
+        password
+    };
+
+    const response = await fetch("http://localhost:5678/api/users/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(chargeUtile)
+    });
+
+    if (!response.ok) {
+        throw new Error("Identifiant ou mot de passe incorrect");
     }
 
-    const data = await fetch("http://localhost:5678/api/users/login", {
-        method : "POST",
-        headers : {"Content-Type" : "application/json"},
-        body : JSON.stringify(chargeUtile)
-    })
-    .then(async(response)=>{
-        const responseData = await response.json()
-        token = responseData.token
-        console.log(token);
-    })
-    localStorage.setItem("token", token)
+    const responseData = await response.json();
+    const token = responseData.token;
+    localStorage.setItem("token", token);
 }
 
 //Fonction de connexion grâce à l'email et le mdp//
 
-function connexionLogin(){
-    boutonSubmitSeConnecter.addEventListener("submit", (event)=>{
-        event.preventDefault()
-        if(inputMail.value != "sophie.bluel@test.tld" || inputPassword.value != "S0phie"){
-            identifiantMotDePasseIncorrect()
-        } else {
+function connexionLogin() {
+    boutonSubmitSeConnecter.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-            recuperationToken() 
-            setTimeout(function() {
-                window.location.href= "index.html";
-            }, 100);  
-            testLocalStorage()
+        const email = inputMail.value;
+        const password = inputPassword.value;
+
+        try {
+            await recuperationToken(email, password);
+            window.location.href = "index.html";
+
+        } catch (error) {
+            console.error("Erreur lors de l'authentification:", error);
+            identifiantMotDePasseIncorrect();
         }
-        
-    })
+    });
 }
+
+// function connexionLogin(){
+//     boutonSubmitSeConnecter.addEventListener("submit", (event)=>{
+//         event.preventDefault()
+//         if(inputMail.value != "sophie.bluel@test.tld" || inputPassword.value != "S0phie"){
+//             identifiantMotDePasseIncorrect()
+//         } else {
+
+//             recuperationToken() 
+//             setTimeout(function() {
+//                 window.location.href= "index.html";
+//             }, 100);  
+//             testLocalStorage()
+//         }
+        
+//     })
+// }
 
 
 // Function pour le message d'erreur si mauvais mdp ou identifiant//
