@@ -168,6 +168,9 @@ function testLocalStorage(){
         disparitionBarreDeFiltre()
         gestionModal()
         changementModal()
+    } else {
+        let modalContainer = document.querySelector(".modalContainer") 
+        modalContainer.style.display="none"
     }
 }
 

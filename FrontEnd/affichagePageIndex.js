@@ -1,5 +1,6 @@
 recupérationApi()
 testLocalStorage()
+
 recupérationApiModal()
 ajoutPhoto()
 envoieDeLaPhotoApi()
