@@ -426,7 +426,7 @@ a {
 
 #modal1 hr{
 	position: relative;
-	top: 150px;
+	top: 10px;
 
 }
 
@@ -541,6 +541,10 @@ a {
 	color: #306685;
 	cursor: pointer;
 	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 
@@ -548,44 +552,59 @@ a {
 
 
 .formulaireAjoutDePhoto button{
-	height: 20px;
-	z-index: 0;
-}
-
-.contenuAjoutPhoto{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #E8F1F6;
-	border-radius: 3px;
-	height: 175px;
-}
-
-
-.contenuAjoutPhoto svg{
-	height: 76px;
-	width: 76px;
-	padding: 15px 0px;
-}
-
-.contenuAjoutPhoto p{
-	font-size: 10px;
-	padding-top: 5px;
-	padding-bottom: 15px;
-}
-
-.containerAjoutPhoto{
-	height: 175px;
-	width: 100%;
-	background-color: #E8F1F6;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	height: 20px;
+	z-index: 0;
+}
 
+
+.containerAjoutPhoto {
+    height: 175px;
+    width: 100%;
+    background-color: #E8F1F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenuAjoutPhoto {
+    background-color: #E8F1F6;
+    border-radius: 3px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrePhoto{
+	margin: auto;
+	height: 5em;
+    width: 10em;
+    padding: 15px 0px;
+}
+
+
+.contenuAjoutPhoto p {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
 }
 
 #apparitionImage img{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
 	height: 175px;
 	object-fit:cover;
 	width: auto;
